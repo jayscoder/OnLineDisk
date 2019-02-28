@@ -17,10 +17,11 @@ from django.contrib import admin
 from mainDisk import views
 from . import settings
 from django.conf.urls.static import static
-from django.conf.urls import url
+from django.urls import path
 
 urlpatterns = [
-    url('admin/', admin.site.urls),
+    path('', admin.site.urls),
+    path('admin/', admin.site.urls),
     #path(r'mainDisk/', views.index),
 ]
 
